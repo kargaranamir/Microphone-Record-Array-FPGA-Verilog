@@ -1,0 +1,908 @@
+Release 14.7 - xst P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.25 secs
+ 
+--> Reading design: afifo_loopback.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "afifo_loopback.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "afifo_loopback"
+Output Format                      : NGC
+Target Device                      : xc6slx9-2-tqg144
+
+---- Source Options
+Top Module Name                    : afifo_loopback
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : Soft
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "F:\Ise\ipcore_dir\pll.v" into library work
+Parsing module <pll>.
+Analyzing Verilog file "F:\Ise\ipcore_dir\adc_clk_gen.v" into library work
+Parsing module <adc_clk_gen>.
+Analyzing Verilog file "F:\Ise\src\afifo_hls.v" into library work
+Parsing module <afifo_hls>.
+Analyzing Verilog file "F:\Ise\ipcore_dir\fifo.v" into library work
+Parsing module <fifo>.
+Analyzing Verilog file "F:\Ise\ipcore_dir\data_fifo.v" into library work
+Parsing module <data_fifo>.
+Analyzing Verilog file "F:\Ise\src\afifo.v" into library work
+Parsing module <afifo>.
+Analyzing Verilog file "F:\Ise\data_to_byte.v" into library work
+Parsing module <data_to_byte>.
+Analyzing Verilog file "F:\Ise\ADC_read.v" into library work
+Parsing module <ADC_read>.
+Analyzing Verilog file "F:\Ise\src\afifo_loopback.v" into library work
+Parsing module <afifo_loopback>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <afifo_loopback>.
+
+Elaborating module <pll>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=6,CLKFX_MULTIPLY=25,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=41.666,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "F:\Ise\ipcore_dir\pll.v" Line 128: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <afifo>.
+
+Elaborating module <afifo_hls>.
+WARNING:HDLCompiler:872 - "F:\Ise\src\afifo_hls.v" Line 70: Using initial value of rd_n_V_1_vld_reg since it is never assigned
+WARNING:HDLCompiler:872 - "F:\Ise\src\afifo_hls.v" Line 75: Using initial value of wr_n_V_1_vld_reg since it is never assigned
+WARNING:HDLCompiler:872 - "F:\Ise\src\afifo_hls.v" Line 80: Using initial value of oe_V_1_vld_reg since it is never assigned
+WARNING:HDLCompiler:872 - "F:\Ise\src\afifo_hls.v" Line 84: Using initial value of data_V_0_vld_reg since it is never assigned
+WARNING:HDLCompiler:872 - "F:\Ise\src\afifo_hls.v" Line 87: Using initial value of data_V_1_vld_reg since it is never assigned
+WARNING:HDLCompiler:413 - "F:\Ise\src\afifo_hls.v" Line 261: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "F:\Ise\src\afifo_hls.v" Line 264: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "F:\Ise\src\afifo_hls.v" Line 302: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "F:\Ise\src\afifo_hls.v" Line 331: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "F:\Ise\src\afifo_hls.v" Line 364: Result of 32-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <fifo>.
+WARNING:HDLCompiler:1499 - "F:\Ise\ipcore_dir\fifo.v" Line 39: Empty module <fifo> remains a black box.
+WARNING:HDLCompiler:1127 - "F:\Ise\src\afifo_loopback.v" Line 71: Assignment to rx_dout ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Ise\src\afifo_loopback.v" Line 72: Assignment to rx_empty ignored, since the identifier is never used
+
+Elaborating module <adc_clk_gen>.
+
+Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=17,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=50,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=100,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=41.666,REF_JITTER=0.01)>.
+WARNING:HDLCompiler:1127 - "F:\Ise\ipcore_dir\adc_clk_gen.v" Line 117: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Ise\ipcore_dir\adc_clk_gen.v" Line 118: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Ise\ipcore_dir\adc_clk_gen.v" Line 119: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Ise\ipcore_dir\adc_clk_gen.v" Line 120: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Ise\ipcore_dir\adc_clk_gen.v" Line 121: Assignment to locked_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\Ise\src\afifo_loopback.v" Line 104: Assignment to CLK_SCK_tmp ignored, since the identifier is never used
+
+Elaborating module <data_to_byte>.
+
+Elaborating module <data_fifo>.
+WARNING:HDLCompiler:1499 - "F:\Ise\ipcore_dir\data_fifo.v" Line 39: Empty module <data_fifo> remains a black box.
+
+Elaborating module <ADC_read>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <afifo_loopback>.
+    Related source file is "F:\Ise\src\afifo_loopback.v".
+INFO:Xst:3210 - "F:\Ise\src\afifo_loopback.v" line 67: Output port <fifo_read_dout> of the instance <afifo_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Ise\src\afifo_loopback.v" line 67: Output port <fifo_read_empty> of the instance <afifo_i> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\Ise\src\afifo_loopback.v" line 99: Output port <CLK_SCK> of the instance <instance_name> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <afifo_loopback> synthesized.
+
+Synthesizing Unit <pll>.
+    Related source file is "F:\Ise\ipcore_dir\pll.v".
+    Summary:
+	no macro.
+Unit <pll> synthesized.
+
+Synthesizing Unit <afifo>.
+    Related source file is "F:\Ise\src\afifo.v".
+    Found 1-bit tristate buffer for signal <data<7>> created at line 26
+    Found 1-bit tristate buffer for signal <data<6>> created at line 26
+    Found 1-bit tristate buffer for signal <data<5>> created at line 26
+    Found 1-bit tristate buffer for signal <data<4>> created at line 26
+    Found 1-bit tristate buffer for signal <data<3>> created at line 26
+    Found 1-bit tristate buffer for signal <data<2>> created at line 26
+    Found 1-bit tristate buffer for signal <data<1>> created at line 26
+    Found 1-bit tristate buffer for signal <data<0>> created at line 26
+    Summary:
+	inferred   8 Tristate(s).
+Unit <afifo> synthesized.
+
+Synthesizing Unit <afifo_hls>.
+    Related source file is "F:\Ise\src\afifo_hls.v".
+        ap_const_logic_1 = 1'b1
+        ap_const_logic_0 = 1'b0
+        ap_ST_st1_fsm_0 = 2'b01
+        ap_ST_st2_fsm_1 = 2'b10
+        ap_const_lv1_0 = 1'b0
+        ap_const_lv4_0 = 4'b0000
+        ap_const_lv32_0 = 32'b00000000000000000000000000000000
+        ap_const_lv1_1 = 1'b1
+        ap_const_lv4_5 = 4'b0101
+        ap_const_lv32_1 = 32'b00000000000000000000000000000001
+        ap_const_lv4_2 = 4'b0010
+        ap_const_lv4_9 = 4'b1001
+        ap_const_lv4_8 = 4'b1000
+        ap_const_lv4_7 = 4'b0111
+        ap_const_lv4_6 = 4'b0110
+        ap_const_lv4_4 = 4'b0100
+        ap_const_lv4_3 = 4'b0011
+        ap_const_lv4_1 = 4'b0001
+        ap_true = 1'b1
+WARNING:Xst - Value "none" of property "fsm_encoding" is not applicable. List of valid values is "auto, compact, gray, johnson, one-hot, sequential, speed1, user" 
+    Found 2-bit register for signal <ap_CS_fsm>.
+    Found 4-bit register for signal <State_load_reg_233>.
+    Found 8-bit register for signal <data_V_0_data_reg>.
+    Found 8-bit register for signal <data_V_1_data_reg>.
+    Found 1-bit register for signal <oe_V_1_data_reg>.
+    Found 1-bit register for signal <rd_n_V_1_data_reg>.
+    Found 1-bit register for signal <wr_n_V_1_data_reg>.
+    Found 4-bit register for signal <State>.
+    Found finite state machine <FSM_0> for signal <ap_CS_fsm>.
+    -----------------------------------------------------------------------
+    | States             | 2                                              |
+    | Transitions        | 6                                              |
+    | Inputs             | 5                                              |
+    | Outputs            | 4                                              |
+    | Clock              | ap_clk (rising_edge)                           |
+    | Reset              | ap_rst (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 01                                             |
+    | Power Up State     | 01                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <State>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 172                                            |
+    | Inputs             | 9                                              |
+    | Outputs            | 12                                             |
+    | Clock              | ap_clk (rising_edge)                           |
+    | Reset              | ap_rst (positive)                              |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Power Up State     | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred  23 D-type flip-flop(s).
+	inferred   2 Finite State Machine(s).
+Unit <afifo_hls> synthesized.
+
+Synthesizing Unit <adc_clk_gen>.
+    Related source file is "F:\Ise\ipcore_dir\adc_clk_gen.v".
+    Summary:
+	no macro.
+Unit <adc_clk_gen> synthesized.
+
+Synthesizing Unit <data_to_byte>.
+    Related source file is "F:\Ise\data_to_byte.v".
+    Register <ftdi_wr_en> equivalent to <rd_en> has been removed
+    Found 1-bit register for signal <rd_en>.
+    Found 1-bit register for signal <wr_en>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <data_to_byte> synthesized.
+
+Synthesizing Unit <ADC_read>.
+    Related source file is "F:\Ise\ADC_read.v".
+WARNING:Xst:647 - Input <MCLK> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <WSDD>.
+    Found 1-bit register for signal <data_temp<23>>.
+    Found 1-bit register for signal <data_temp<22>>.
+    Found 1-bit register for signal <data_temp<21>>.
+    Found 1-bit register for signal <data_temp<20>>.
+    Found 1-bit register for signal <data_temp<19>>.
+    Found 1-bit register for signal <data_temp<18>>.
+    Found 1-bit register for signal <data_temp<17>>.
+    Found 1-bit register for signal <data_temp<16>>.
+    Found 1-bit register for signal <data_temp<15>>.
+    Found 1-bit register for signal <data_temp<14>>.
+    Found 1-bit register for signal <data_temp<13>>.
+    Found 1-bit register for signal <data_temp<12>>.
+    Found 1-bit register for signal <data_temp<11>>.
+    Found 1-bit register for signal <data_temp<10>>.
+    Found 1-bit register for signal <data_temp<9>>.
+    Found 1-bit register for signal <data_temp<8>>.
+    Found 1-bit register for signal <data_temp<7>>.
+    Found 1-bit register for signal <data_temp<6>>.
+    Found 1-bit register for signal <data_temp<5>>.
+    Found 1-bit register for signal <data_temp<4>>.
+    Found 1-bit register for signal <data_temp<3>>.
+    Found 1-bit register for signal <data_temp<2>>.
+    Found 1-bit register for signal <data_temp<1>>.
+    Found 1-bit register for signal <data_temp<0>>.
+    Found 1-bit register for signal <data_valid>.
+    Found 32-bit register for signal <data_left>.
+    Found 32-bit register for signal <data_right>.
+    Found 64-bit register for signal <data_trans>.
+    Found 1-bit register for signal <WSD>.
+    Found 1-bit register for signal <EN<23>>.
+    Found 1-bit register for signal <EN<22>>.
+    Found 1-bit register for signal <EN<21>>.
+    Found 1-bit register for signal <EN<20>>.
+    Found 1-bit register for signal <EN<19>>.
+    Found 1-bit register for signal <EN<18>>.
+    Found 1-bit register for signal <EN<17>>.
+    Found 1-bit register for signal <EN<16>>.
+    Found 1-bit register for signal <EN<15>>.
+    Found 1-bit register for signal <EN<14>>.
+    Found 1-bit register for signal <EN<13>>.
+    Found 1-bit register for signal <EN<12>>.
+    Found 1-bit register for signal <EN<11>>.
+    Found 1-bit register for signal <EN<10>>.
+    Found 1-bit register for signal <EN<9>>.
+    Found 1-bit register for signal <EN<8>>.
+    Found 1-bit register for signal <EN<7>>.
+    Found 1-bit register for signal <EN<6>>.
+    Found 1-bit register for signal <EN<5>>.
+    Found 1-bit register for signal <EN<4>>.
+    Found 1-bit register for signal <EN<3>>.
+    Found 1-bit register for signal <EN<2>>.
+    Found 1-bit register for signal <EN<1>>.
+    Found 1-bit register for signal <EN<0>>.
+    Summary:
+	inferred 179 D-type flip-flop(s).
+Unit <ADC_read> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 38
+ 1-bit register                                        : 30
+ 2-bit register                                        : 1
+ 24-bit register                                       : 1
+ 32-bit register                                       : 2
+ 4-bit register                                        : 1
+ 64-bit register                                       : 1
+ 8-bit register                                        : 2
+# Tristates                                            : 8
+ 1-bit tristate buffer                                 : 8
+# FSMs                                                 : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Reading core <ipcore_dir/fifo.ngc>.
+Reading core <ipcore_dir/data_fifo.ngc>.
+Loading core <fifo> for timing and area information for instance <fifo_write>.
+Loading core <fifo> for timing and area information for instance <fifo_read>.
+Loading core <data_fifo> for timing and area information for instance <data_byte_uut>.
+INFO:Xst:2261 - The FF/Latch <data_left_25> in Unit <uut1> is equivalent to the following 6 FFs/Latches, which will be removed : <data_left_26> <data_left_27> <data_left_28> <data_left_29> <data_left_30> <data_left_31> 
+INFO:Xst:2261 - The FF/Latch <data_right_24> in Unit <uut1> is equivalent to the following 7 FFs/Latches, which will be removed : <data_right_25> <data_right_26> <data_right_27> <data_right_28> <data_right_29> <data_right_30> <data_right_31> 
+WARNING:Xst:1426 - The value init of the FF/Latch data_left_24 hinder the constant cleaning in the block uut1.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <data_left_25> has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <data_right_24> has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_63> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_62> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_61> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_60> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_59> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_58> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_57> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_56> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_31> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_30> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_29> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_28> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_27> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_26> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_25> (without init value) has a constant value of 0 in block <uut1>. This FF/Latch will be trimmed during the optimization process.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 204
+ Flip-Flops                                            : 204
+# FSMs                                                 : 2
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch data_left_24 hinder the constant cleaning in the block ADC_read.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <data_right_31> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_30> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_29> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_28> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_27> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_26> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_25> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_right_24> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_31> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_30> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_29> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_28> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_27> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_26> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <data_left_25> has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_63> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_62> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_61> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_60> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_59> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_58> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_57> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_56> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_31> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_30> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_29> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_28> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_27> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_26> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <data_trans_25> (without init value) has a constant value of 0 in block <ADC_read>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <afifo_i/afifo_hls_i0/FSM_0> on signal <ap_CS_fsm[1:1]> with sequential encoding.
+-------------------
+ State | Encoding
+-------------------
+ 01    | 0
+ 10    | 1
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <afifo_i/afifo_hls_i0/FSM_1> on signal <State[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0101  | 0101
+ 0010  | 0010
+ 0011  | 0011
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 0100  | 0100
+-------------------
+INFO:Xst:1901 - Instance pll_base_inst in unit pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
+WARNING:Xst:3002 - This design contains one or more registers/latches that are directly
+   incompatible with the Spartan6 architecture. The two primary causes of this is
+   either a register or latch described with both an asynchronous set and
+   asynchronous reset, or a register or latch described with an asynchronous
+   set or reset which however has an initialization value of the opposite 
+   polarity (i.e. asynchronous reset with an initialization value of 1).
+    While this circuit can be built, it creates a sub-optimal implementation
+   in terms of area, power and performance. For a more optimal implementation
+   Xilinx highly recommends one of the following:
+
+          1) Remove either the set or reset from all registers and latches
+             if not needed for required functionality
+          2) Modify the code in order to produce a synchronous set
+             and/or reset (both is preferred)
+          3) Ensure all registers have the same initialization value as the
+             described asynchronous set or reset polarity
+          4) Use the -async_to_sync option to transform the asynchronous
+             set/reset to synchronous operation
+             (timing simulation highly recommended when using this option)
+
+  Please refer to http://www.xilinx.com search string "Spartan6 asynchronous set/reset" for more details.
+
+  List of register instances with asynchronous set or reset and opposite initialization value:
+    EN_23 in unit <ADC_read>
+
+
+Optimizing unit <pll> ...
+
+Optimizing unit <adc_clk_gen> ...
+
+Optimizing unit <afifo_loopback> ...
+
+Optimizing unit <afifo> ...
+
+Optimizing unit <afifo_hls> ...
+
+Optimizing unit <ADC_read> ...
+
+Optimizing unit <data_to_byte> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block afifo_loopback, actual ratio is 4.
+WARNING:Xst:1426 - The value init of the FF/Latch EN_23_LD hinder the constant cleaning in the block uut1.
+   You should achieve better results by setting this init to 1.
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <data_byte_uut> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <data_byte_uut> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo_read> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i> in Unit <fifo_write> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_fb> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <data_byte_uut> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <data_byte_uut> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <data_byte_uut> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <data_byte_uut> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 179
+ Flip-Flops                                            : 179
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : afifo_loopback.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 578
+#      GND                         : 10
+#      INV                         : 16
+#      LUT1                        : 67
+#      LUT2                        : 50
+#      LUT3                        : 17
+#      LUT4                        : 96
+#      LUT5                        : 52
+#      LUT6                        : 59
+#      MUXCY                       : 137
+#      MUXF7                       : 1
+#      VCC                         : 4
+#      XORCY                       : 69
+# FlipFlops/Latches                : 477
+#      FD                          : 142
+#      FDC                         : 29
+#      FDCE                        : 90
+#      FDE                         : 166
+#      FDP                         : 27
+#      FDPE                        : 2
+#      FDR                         : 4
+#      FDRE                        : 16
+#      LD                          : 1
+# RAMS                             : 8
+#      RAMB16BWER                  : 8
+# Clock Buffers                    : 7
+#      BUFG                        : 6
+#      BUFGP                       : 1
+# IO Buffers                       : 18
+#      IBUF                        : 5
+#      IBUFG                       : 1
+#      IOBUF                       : 8
+#      OBUF                        : 4
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# Others                           : 1
+#      PLL_ADV                     : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             477  out of  11440     4%  
+ Number of Slice LUTs:                  357  out of   5720     6%  
+    Number used as Logic:               357  out of   5720     6%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    745
+   Number with an unused Flip Flop:     268  out of    745    35%  
+   Number with an unused LUT:           388  out of    745    52%  
+   Number of fully used LUT-FF pairs:    89  out of    745    11%  
+   Number of unique control sets:        37
+
+IO Utilization: 
+ Number of IOs:                          19
+ Number of bonded IOBs:                  19  out of    102    18%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                8  out of     32    25%  
+    Number using Block RAM only:          8
+ Number of BUFG/BUFGCTRLs:                7  out of     16    43%  
+ Number of PLL_ADVs:                      1  out of      2    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_24                             | DCM_SP:CLKFX           | 257   |
+CLK_SCK                            | BUFGP                  | 149   |
+uut1/WSP(uut1/Mxor_WSP_xo<0>1:O)   | NONE(*)(uut1/EN_23_LD) | 1     |
+CLK_WS                             | IBUF+BUFG              | 82    |
+-----------------------------------+------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 25.404ns (Maximum Frequency: 39.364MHz)
+   Minimum input arrival time before clock: 4.052ns
+   Maximum output required time after clock: 5.360ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_24'
+  Clock period: 25.404ns (frequency: 39.364MHz)
+  Total number of paths / destination ports: 2251 / 692
+-------------------------------------------------------------------------
+Delay:               6.097ns (Levels of Logic = 5)
+  Source:            afifo_i/fifo_write/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i (FF)
+  Destination:       afifo_i/fifo_write/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_11 (FF)
+  Source Clock:      clk_24 rising 4.2X
+  Destination Clock: clk_24 rising 4.2X
+
+  Data Path: afifo_i/fifo_write/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i to afifo_i/fifo_write/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_d1_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDP:C->Q              1   0.525   0.681  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/empty_fwft_i (empty)
+     end scope: 'afifo_i/fifo_write:empty'
+     INV:I->O             10   0.255   1.008  empty_INV_48_o1_INV_0 (empty_INV_48_o)
+     begin scope: 'afifo_i/afifo_hls_i0:outData_V_data_V_empty_n'
+     LUT5:I4->O           17   0.254   1.485  outData_V_data_V_read1 (outData_V_data_V_read)
+     end scope: 'afifo_i/afifo_hls_i0:outData_V_data_V_read'
+     begin scope: 'afifo_i/fifo_write:rd_en'
+     LUT4:I0->O           22   0.254   1.333  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.rfwft/Mmux_RAM_RD_EN_FWFT11 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_rd_en)
+     FDCE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/rpntr/gc0.count_1
+    ----------------------------------------
+    Total                      6.097ns (1.590ns logic, 4.507ns route)
+                                       (26.1% logic, 73.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_SCK'
+  Clock period: 14.303ns (frequency: 69.915MHz)
+  Total number of paths / destination ports: 12436 / 268
+-------------------------------------------------------------------------
+Delay:               14.303ns (Levels of Logic = 11)
+  Source:            uut1/EN_18 (FF)
+  Destination:       uut1/data_temp_5 (FF)
+  Source Clock:      CLK_SCK rising
+  Destination Clock: CLK_SCK rising
+
+  Data Path: uut1/EN_18 to uut1/data_temp_5
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.525   1.104  EN_18 (EN_18)
+     LUT3:I0->O            3   0.235   0.994  EN[23]_PWR_12_o_equal_5_o<23>41 (EN[23]_PWR_12_o_equal_5_o<23>4)
+     LUT5:I2->O            6   0.235   1.331  EN[23]_GND_20_o_equal_11_o<23>111 (EN[23]_GND_20_o_equal_11_o<23>11)
+     LUT6:I0->O            6   0.254   0.876  EN[23]_GND_20_o_equal_19_o<23>11 (EN[23]_GND_20_o_equal_19_o<23>1)
+     LUT4:I3->O            7   0.254   0.910  EN[23]_GND_20_o_equal_21_o<23>11 (EN[23]_GND_20_o_equal_21_o<23>1)
+     LUT4:I3->O            4   0.254   1.234  EN[23]_GND_20_o_equal_21_o<23>1 (EN[23]_GND_20_o_equal_21_o)
+     LUT6:I1->O            3   0.254   0.766  EN[23]_SD_select_29_OUT<0>11111 (EN[23]_SD_select_29_OUT<0>11111)
+     LUT5:I4->O            1   0.254   0.682  EN[23]_SD_select_29_OUT<13>1111_SW0 (N2)
+     LUT6:I5->O            2   0.254   0.954  EN[23]_SD_select_29_OUT<13>1111 (EN[23]_SD_select_29_OUT<13>1111)
+     LUT5:I2->O            2   0.235   1.181  EN[23]_SD_select_29_OUT<17>1111 (EN[23]_SD_select_29_OUT<17>111)
+     LUT6:I0->O            2   0.254   0.954  EN[23]_SD_select_29_OUT<17>112 (EN[23]_SD_select_29_OUT<17>11)
+     LUT5:I2->O            1   0.235   0.000  EN[23]_SD_select_29_OUT<8>1 (EN[23]_SD_select_29_OUT<15>)
+     FD:D                      0.074          data_temp_15
+    ----------------------------------------
+    Total                     14.303ns (3.317ns logic, 10.986ns route)
+                                       (23.2% logic, 76.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK_WS'
+  Clock period: 3.415ns (frequency: 292.826MHz)
+  Total number of paths / destination ports: 334 / 155
+-------------------------------------------------------------------------
+Delay:               3.415ns (Levels of Logic = 7)
+  Source:            uut0/data_byte_uut/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_4 (FF)
+  Destination:       uut0/data_byte_uut/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i (FF)
+  Source Clock:      CLK_WS rising
+  Destination Clock: CLK_WS rising
+
+  Data Path: uut0/data_byte_uut/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_4 to uut0/data_byte_uut/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   1.002  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin_4 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_bin<4>)
+     LUT4:I0->O            1   0.254   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/v1<0>1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/v1<0>)
+     MUXCY:S->O            1   0.215   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.gm[0].gm1.m1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.carrynet<0>)
+     MUXCY:CI->O           1   0.023   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.gm[1].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.carrynet<1>)
+     MUXCY:CI->O           1   0.023   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.gm[2].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.carrynet<2>)
+     MUXCY:CI->O           1   0.023   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.gm[3].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.carrynet<3>)
+     MUXCY:CI->O           1   0.235   0.790  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/c2/gmux.gm[4].gms.ms (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp2)
+     LUT4:I2->O            2   0.250   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_comp2_OR_8_o1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/comp1_comp2_OR_8_o)
+     FD:D                      0.074          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i
+    ----------------------------------------
+    Total                      3.415ns (1.623ns logic, 1.792ns route)
+                                       (47.5% logic, 52.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_24'
+  Total number of paths / destination ports: 8 / 4
+-------------------------------------------------------------------------
+Offset:              3.881ns (Levels of Logic = 4)
+  Source:            ft_txe_n (PAD)
+  Destination:       afifo_i/afifo_hls_i0/State_FSM_FFd3 (FF)
+  Destination Clock: clk_24 rising 4.2X
+
+  Data Path: ft_txe_n to afifo_i/afifo_hls_i0/State_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.328   1.080  ft_txe_n_IBUF (ft_txe_n_IBUF)
+     begin scope: 'afifo_i:txe_n'
+     begin scope: 'afifo_i/afifo_hls_i0:txe_n_V<0>'
+     LUT4:I0->O            1   0.254   0.910  State_FSM_FFd3-In2 (State_FSM_FFd3-In2)
+     LUT6:I3->O            1   0.235   0.000  State_FSM_FFd3-In3 (State_FSM_FFd3-In)
+     FDR:D                     0.074          State_FSM_FFd3
+    ----------------------------------------
+    Total                      3.881ns (1.891ns logic, 1.990ns route)
+                                       (48.7% logic, 51.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_SCK'
+  Total number of paths / destination ports: 74 / 74
+-------------------------------------------------------------------------
+Offset:              4.052ns (Levels of Logic = 3)
+  Source:            CLK_WS (PAD)
+  Destination:       uut1/data_left_0 (FF)
+  Destination Clock: CLK_SCK rising
+
+  Data Path: CLK_WS to uut1/data_left_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.328   0.766  CLK_WS_IBUF (CLK_WS_IBUF)
+     begin scope: 'uut1:LRCLK'
+     LUT2:I1->O           25   0.254   1.402  _n0115_inv1 (_n0115_inv)
+     FDE:CE                    0.302          data_left_0
+    ----------------------------------------
+    Total                      4.052ns (1.884ns logic, 2.168ns route)
+                                       (46.5% logic, 53.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_24'
+  Total number of paths / destination ports: 18 / 10
+-------------------------------------------------------------------------
+Offset:              5.360ns (Levels of Logic = 3)
+  Source:            afifo_i/afifo_hls_i0/oe_V_1_data_reg_0 (FF)
+  Destination:       ft_data<7> (PAD)
+  Source Clock:      clk_24 rising 4.2X
+
+  Data Path: afifo_i/afifo_hls_i0/oe_V_1_data_reg_0 to ft_data<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   0.525   0.725  oe_V_1_data_reg_0 (oe_V_1_data_reg_0)
+     end scope: 'afifo_i/afifo_hls_i0:oe_V<0>'
+     INV:I->O              8   0.255   0.943  oe_V_inv1_INV_0 (oe_V_inv)
+     IOBUF:T->IO               2.912          data_7_IOBUF (data<7>)
+     end scope: 'afifo_i:data<7>'
+    ----------------------------------------
+    Total                      5.360ns (3.692ns logic, 1.668ns route)
+                                       (68.9% logic, 31.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_SCK'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              5.280ns (Levels of Logic = 2)
+  Source:            uut1/data_valid (FF)
+  Destination:       validate (PAD)
+  Source Clock:      CLK_SCK rising
+
+  Data Path: uut1/data_valid to validate
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              53   0.525   1.843  data_valid (data_valid)
+     end scope: 'uut1:data_valid'
+     OBUF:I->O                 2.912          validate_OBUF (validate)
+    ----------------------------------------
+    Total                      5.280ns (3.437ns logic, 1.843ns route)
+                                       (65.1% logic, 34.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CLK_SCK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_SCK        |   14.303|         |         |         |
+uut1/WSP       |         |   12.811|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK_WS
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_SCK        |    1.506|         |         |         |
+CLK_WS         |    3.415|         |         |         |
+clk_24         |    3.274|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk_24
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK_WS         |    2.216|         |         |         |
+clk_24         |    6.097|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.55 secs
+ 
+--> 
+
+Total memory usage is 202072 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   74 (   0 filtered)
+Number of infos    :   31 (   0 filtered)
+

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Mon Nov 07 21:03:43 2016
+# Process ID: 7876
+# Log file: D:/Documents/Electrical Engineering/Projects/Microphone Array/ISE/PosedgeOne_ftdi_afifo_loopback_950112/ise/planAhead_run_3/planAhead.log
+# Journal file: D:/Documents/Electrical Engineering/Projects/Microphone Array/ISE/PosedgeOne_ftdi_afifo_loopback_950112/ise/planAhead_run_3/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/Documents/Electrical Engineering/Projects/Microphone Array/ISE/PosedgeOne_ftdi_afifo_loopback_950112/ise/pa.fromNetlist.tcl}
+set_property iostandard LVCMOS25 [get_ports [list CLK_MCLK]]
+set_property iostandard LVCMOS25 [get_ports [list CLK_SCK]]

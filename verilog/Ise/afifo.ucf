@@ -1,0 +1,30 @@
+NET "clk_24"        LOC = "p50";
+NET "reset_i_n"     LOC = "p133"; # active low
+
+# FTDI FT2232-chB used as USB Asynchronnous FIFO
+NET "ft_data<0>"    LOC = p105; # BDBUS0
+NET "ft_data<1>"    LOC = p104; # BDBUS1
+NET "ft_data<2>"    LOC = p102; # BDBUS2
+NET "ft_data<3>"    LOC = p101; # BDBUS3
+NET "ft_data<4>"    LOC = p100; # BDBUS4
+NET "ft_data<5>"    LOC = p99;  # BDBUS5
+NET "ft_data<6>"    LOC = p98;  # BDBUS6
+NET "ft_data<7>"    LOC = p97;  # BDBUS7
+NET "ft_rxf_n"      LOC = p95;  # BCBUS0
+NET "ft_txe_n"      LOC = p94;  # BCBUS1
+NET "ft_rd_n"       LOC = p93;  # BCBUS2
+NET "ft_wr_n"       LOC = p92;  # BCBUS3
+NET "SD1"			  LOC = p111;
+NET "CLK_MCLK"		  LOC = p112;
+NET "CLK_SCK"		  LOC = p115;
+NET "CLK_WS"		  LOC = p114;
+NET "CLK_SCK" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "CLK_WS" CLOCK_DEDICATED_ROUTE = FALSE;
+NET "validate"		  LOC = p120;
+#NET "ft_siwu"       LOC = p88;  # BCBUS4
+#PIN "uut00/clk_ws_BUFG.O" CLOCK_DEDICATED_ROUTE = FALSE;
+PIN "instance_name/clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#PIN "instance_name/clkout2_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+#Created by Constraints Editor (xc6slx9-tqg144-2) - 2015/10/12
+NET "clk_24" TNM_NET = CLK_24;
+TIMESPEC TS_CLK_24 = PERIOD "clk_24" 24 MHz HIGH 50%;

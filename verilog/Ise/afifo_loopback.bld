@@ -1,0 +1,64 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe -filter
+iseconfig/filter.filter -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc
+afifo.ucf -p xc6slx9-tqg144-2 afifo_loopback.ngc afifo_loopback.ngd
+
+Reading NGO file "F:/Ise/afifo_loopback.ngc" ...
+Loading design module "ipcore_dir/fifo.ngc"...
+Loading design module "ipcore_dir/data_fifo.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "afifo.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'CLK_24', used in period specification
+   'TS_CLK_24', was traced into DCM_SP instance dcm_sp_inst. The following new
+   TNM groups and period specifications were generated at the DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_U3_clkfx = PERIOD "U3_clkfx" TS_CLK_24 * 4.166666667 HIGH
+   50%>
+
+Done...
+
+WARNING:NgdBuild:1212 - User specified non-default attribute value (41.666000)
+   was detected for the CLKIN_PERIOD attribute on DCM "dcm_sp_inst".  This does
+   not match the PERIOD constraint value (24 MHz.).  The uncertainty calculation
+   will use the non-default attribute value.  This could result in incorrect
+   uncertainty calculated for DCM output clocks.
+WARNING:NgdBuild:1440 - User specified non-default attribute value (41.666) was
+   detected for the CLKIN1_PERIOD attribute on PLL "PLL_ADV".  This does not
+   match the PERIOD constraint value (24 MHz.).  The uncertainty calculation
+   will use the PERIOD constraint value.  This could result in incorrect
+   uncertainty calculated for PLL output clocks.
+Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'N12' has no driver
+WARNING:NgdBuild:452 - logical net 'N13' has no driver
+WARNING:NgdBuild:452 - logical net 'N14' has no driver
+WARNING:NgdBuild:452 - logical net 'N15' has no driver
+WARNING:NgdBuild:452 - logical net 'N16' has no driver
+WARNING:NgdBuild:452 - logical net 'N17' has no driver
+WARNING:NgdBuild:452 - logical net 'N18' has no driver
+WARNING:NgdBuild:452 - logical net 'N19' has no driver
+WARNING:NgdBuild:478 - clock net instance_name/CLK_SCK with clock driver
+   instance_name/clkout2_buf drives no clock pins
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:  11
+
+Total memory usage is 125272 kilobytes
+
+Writing NGD file "afifo_loopback.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+Writing NGDBUILD log file "afifo_loopback.bld"...

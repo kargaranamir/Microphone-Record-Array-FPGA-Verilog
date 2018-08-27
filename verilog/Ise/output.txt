@@ -1,0 +1,13 @@
+Storage Target: SPI Flash Single FPGA
+64M
+FF
+Prom_mic
+F:\
+
+MCS
+No
+lectrical Engineering\Projects\Microphone Array\ISE\PosedgeOne_ftdi_afifo_loopback_950112\ise\
+
+MCS
+No
+o

@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator P.20131013
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o F:\//Prom_mic -s 8192 -u 0000 F:/Ise/afifo_loopback.bit -spi 
+
+PROM F:\Prom_mic.prm map: Tue Jan 23 23:23:40 2018
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          8192K
+PROM start    0000:0000
+PROM end      007f:ffff
+PROM checksum 7a632f6c
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0005:327b     Jan 23 23:22:48 2018 F:/Ise/afifo_loopback.bit

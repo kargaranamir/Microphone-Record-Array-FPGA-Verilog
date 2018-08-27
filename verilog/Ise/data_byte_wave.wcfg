@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Documents/Electrical Engineering/Projects/Microphone Array/ISE/PosedgeOne_ftdi_afifo_loopback_950112/ise/data_to_byte_testbench_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="data_to_byte_testbench" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/data_to_byte_testbench/fifo_rx_rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rx_rd</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/tx_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/tx_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_wr</obj_property>
+      <obj_property name="ObjectShortName">tx_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/fifo_rx_dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rx_dout[511:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_dout[511:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/fifo_rx_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rx_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">full</obj_property>
+      <obj_property name="ObjectShortName">full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/clk_pll" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_pll</obj_property>
+      <obj_property name="ObjectShortName">clk_pll</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/reset_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/tx_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_full</obj_property>
+      <obj_property name="ObjectShortName">tx_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/wr_clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_clk</obj_property>
+      <obj_property name="ObjectShortName">wr_clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/din" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">din[511:0]</obj_property>
+      <obj_property name="ObjectShortName">din[511:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/wr_en" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">wr_en</obj_property>
+      <obj_property name="ObjectShortName">wr_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/temp" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temp[9:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[9:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/clk_pll" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk_pll</obj_property>
+      <obj_property name="ObjectShortName">clk_pll</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/reset_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/fifo_rx_dout" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rx_dout[511:0]</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_dout[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/fifo_rx_empty" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rx_empty</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_empty</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/tx_full" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_full</obj_property>
+      <obj_property name="ObjectShortName">tx_full</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/fifo_rx_rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fifo_rx_rd</obj_property>
+      <obj_property name="ObjectShortName">fifo_rx_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/tx_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">tx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/tx_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tx_wr</obj_property>
+      <obj_property name="ObjectShortName">tx_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/next_rx_rd" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">next_rx_rd</obj_property>
+      <obj_property name="ObjectShortName">next_rx_rd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/next_tx_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next_tx_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">next_tx_data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/next_tx_wr" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">next_tx_wr</obj_property>
+      <obj_property name="ObjectShortName">next_tx_wr</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/byte_cnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">byte_cnt[5:0]</obj_property>
+      <obj_property name="ObjectShortName">byte_cnt[5:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[511:0]</obj_property>
+      <obj_property name="ObjectShortName">data[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/next_data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">next_data[511:0]</obj_property>
+      <obj_property name="ObjectShortName">next_data[511:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/CurrState_Sreg0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CurrState_Sreg0[1:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrState_Sreg0[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/data_to_byte_testbench/uut/NextState_Sreg0" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">NextState_Sreg0[1:0]</obj_property>
+      <obj_property name="ObjectShortName">NextState_Sreg0[1:0]</obj_property>
+   </wvobject>
+</wave_config>
