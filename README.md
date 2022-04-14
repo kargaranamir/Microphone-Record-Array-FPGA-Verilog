@@ -1,5 +1,4 @@
 # Design and Implementation of Microphone Array using Spartan-6
-============
 
 Files
 ---------------------------------------
