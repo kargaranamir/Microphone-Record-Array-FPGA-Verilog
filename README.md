@@ -1,9 +1,6 @@
 # Design and Implementation of Microphone Array using Spartan-6
 ============
 
-[Report](/poject_fpga.pdf) (in persian)
-
-
 Files
 ---------------------------------------
 
@@ -34,4 +31,10 @@ when the input is very low amplitude sinusoid. We get this output with wide rang
 
 
 Youtube video : https://www.youtube.com/watch?v=ECHrWBCQf3o&feature=youtu.be
+
+
+Sources
+---------------------------------------
+This project has direct and indirecet collaborators. 
+You can find related documents in `documents` folder 
 
